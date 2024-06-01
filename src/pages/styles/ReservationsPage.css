@@ -1,0 +1,31 @@
+.reservationpage__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  .reservationpage__title {
+    margin: 0.8em 0;
+    font-size: 2em;
+    font-weight: 800;
+  }
+  
+  .reservationpage__cards {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.8em;
+    padding: 0 1.5em 2em 1.5em;
+  }
+}
+
+@media screen and (max-width:850px) {
+  .reservationpage__container {
+  
+    .reservationpage__cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}

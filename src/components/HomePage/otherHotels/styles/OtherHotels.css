@@ -1,0 +1,12 @@
+.other__title {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-top: 1em;
+
+  .solo-nombre {
+    color: rgb(226, 24, 24);
+    font-size: 1.25em;
+    font-weight: 800;
+  }
+}

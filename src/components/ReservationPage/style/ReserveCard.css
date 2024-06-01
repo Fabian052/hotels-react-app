@@ -1,0 +1,161 @@
+.reserver__container {
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0.6em 0.6em 0.5em rgba(0, 0, 0, 0.288);
+  border-radius: 1.3em;
+  gap: 1em;
+
+  .reserver__sub-cont {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    gap: 1.7em;
+    
+    .reserver__header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 150px;
+      
+      .reserver__img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+    }
+    
+    .reserver__hotel {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      max-width: 400px;
+      gap: 0.1em;
+
+      .reserver__coment {
+        font-weight: 500;
+        color: rgb(252, 42, 35);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .reserver__info {
+    width: 100%;
+    max-width: 220px;
+
+    .reserver__list {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5em;
+
+      .reserver__item {
+        display: flex;
+        justify-content: space-around;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .reserver__btn-cont {
+    width: 100%;
+    max-width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2em;
+
+    .reserver__btn {
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 1em;
+      background-color: rgb(253, 93, 87);
+      cursor: pointer;
+
+      .btn-img {
+        font-size: 1.5em;
+        color: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:850px) {
+  .reserver__container {
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+    
+    .reserver__sub-cont {
+      flex-direction: column;
+      gap: 1em;
+      
+      .reserver__header {
+        max-width: 270px;
+        
+        .reserver__img {
+          height: 150px;
+          border-radius: 20px 20px 0 0;
+        }
+      }
+      
+      .reserver__hotel {
+
+        .reserver__name {
+          font-size: 1em;
+          padding: 0 0.5em;
+        }
+        
+        .reserver__city {
+          padding: 0 0.5em;
+          font-size: 0.9em;
+        }
+        
+        .reserver__coment {
+          font-size: 0.8em;
+          padding: 0 0.5em;
+        }
+      }
+    }
+  
+    .reserver__info {
+      width: 100%;
+  
+      .reserver__list {
+        font-size: 0.9em;
+        height: 100%;
+        gap: 0.3em;
+        padding: 0 0.5em;
+  
+        .reserver__item {
+          justify-content: space-between;
+          font-weight: 500;
+          font-size: 0.9em;
+        }
+      }
+    }
+  
+    .reserver__btn-cont {
+      margin: 0 auto;
+      margin-bottom: 1em;
+  
+      .reserver__btn {
+        width: 40px;
+        height: 40px;
+        border: none;
+        border-radius: 1em;
+        background-color: rgb(253, 93, 87);
+        cursor: pointer;
+  
+        .btn-img {
+          font-size: 1.4em;
+          color: white;
+        }
+      }
+    }
+  }
+}

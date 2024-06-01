@@ -1,0 +1,58 @@
+.filters__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 0.5em;
+
+  .filters__sub-container {
+    padding: 0 1em;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .filters__title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 0.3em;
+      width: 100px;
+      height: 50px;
+      color: #df1f1fd5;
+    }
+
+    .filters__cont-input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 280px;
+
+      .filters__input {
+        width: 100%;
+        padding: 0.2em;
+        font-size: 1.1em;
+        border-radius: 0.51em;
+        border: 2px solid #e6a0a0d5;
+        box-shadow: 0 0 1em #e6a0a0d5;
+      }
+    }
+  }
+
+  .other__category {
+    padding: 0 1em;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1em;
+
+    .other__cities {
+      width: 280px;
+    }
+
+    .other__prices {
+      width: 230px;
+    }
+  }
+}

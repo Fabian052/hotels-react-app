@@ -1,0 +1,109 @@
+.card__container {
+  display: flex;
+  flex-direction: column;
+
+  .card__header {
+    width: 100%;
+    height: 185px;
+
+    .card__img {
+      width: 100%;
+      height: 175px;
+      border-radius: 1.1em 1.1em 0 0;
+    }
+
+  }
+
+  .card__section {
+    margin-left: 1em;
+    min-height: 130px;
+
+    .card__name {
+      margin: 0.3em 0.5em 0.3em 0;
+      min-height: 3.5em;
+      font-weight: 800;
+    }
+    
+    .card__rating{
+      display: flex;
+      align-items: center;
+      color: rgb(230, 207, 3);
+
+      .number__rating {
+        font-weight: 700;
+        color: rgb(219, 14, 14);
+        margin-left: 0.3em;
+      }
+    }
+
+
+    .card__city {
+      font-size: 0.8em;
+      font-weight: 800;
+    }
+
+    .card__price {
+      font-weight: 700
+    }
+  }
+
+  .card__footer {
+    display: flex;
+    justify-content: center;
+
+    .card__btn {
+      border: none;
+      border-radius: 1.1em;
+      color: white;
+      background-color: #df1f1fd5;
+      margin: 0.2em 0 1.5em 0;
+      padding: 0.5em 1.5em;
+      font-weight: 700;
+      font-size: 0.8em;
+      cursor: pointer;
+
+      &:hover {
+        filter: brightness(1.3);
+        transform: scale(1.07);
+      }
+    }
+  }
+}
+
+@media screen and (max-width:562px) {
+  
+  .card__container {
+  
+    .card__header {
+      width: 100%;
+      height: 150px;
+  
+      .card__img {
+        width: 100%;
+        height: 145px;
+      }
+  
+    }
+  
+    .card__section {
+      min-height: 115px;
+  
+      .card__name {
+        min-height: 2.8em;
+        font-size: 1em;
+      }
+      
+      .card__rating{
+        font-size: 0.9em;
+      }
+    }
+  
+    .card__footer {
+  
+      .card__btn {
+        border-radius: 1em;
+        font-size: 0.75em;
+      }
+    }
+  }
+}
