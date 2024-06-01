@@ -8,7 +8,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { getHotelsThunk } from "./store/states/Hotels.slice";
 import ReservationsPage from "./pages/ReservationsPage";
-import ProtectedRoute from "./pages/ProtectecRoute";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 function App() {
   const dispatch = useDispatch();
