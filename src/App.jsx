@@ -14,7 +14,7 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const url = "https://hotels-api.academlo.tech/hotels";
+    const url = "http://localhost:8080/hotels";
     dispatch(getHotelsThunk(url));
   }, []);
 

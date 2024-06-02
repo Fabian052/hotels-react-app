@@ -18,7 +18,7 @@ const FormReserve = ({ hotel }) => {
   const [, , createReserver] = useCrud();
 
   const submit = (data) => {
-    const url = `https://hotels-api.academlo.tech/bookings`;
+    const url = `http://localhost:8080/bookings`;
     const sendObj = {
       checkIn: data.checkIn,
       checkOut: data.checkOut,

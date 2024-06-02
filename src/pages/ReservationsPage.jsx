@@ -23,7 +23,7 @@ const ReservationsPage = () => {
   const [bookings, getBookings, , deleteBooking] = useCrud();
 
   useEffect(() => {
-    const url = `https://hotels-api.academlo.tech/bookings`;
+    const url = `http://localhost:8080/bookings`;
     getBookings(url);
   }, []);
 

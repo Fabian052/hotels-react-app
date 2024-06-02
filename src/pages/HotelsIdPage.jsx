@@ -16,7 +16,7 @@ import ReviewsCards from "../components/Reviews/ReviewsCards";
 const HotelsIdPage = () => {
   const { id } = useParams();
 
-  const url = `https://hotels-api.academlo.tech/hotels/${id}`;
+  const url = `http://localhost:8080/hotels/${id}`;
   const [hotel, getHotel] = useFetch(url);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const HotelsIdPage = () => {
   const [review, getReview] = useCrud();
 
   useEffect(() => {
-    const url = `https://hotels-api.academlo.tech/reviews?hotelId=${hotel?.id}&userId=${user?.id}`;
+    const url = `http://localhost:8080/reviews?hotelId=${hotel?.id}&userId=${user?.id}`;
     getReview(url);
   }, [id]);
 

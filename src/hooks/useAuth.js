@@ -6,7 +6,7 @@ const useAuth = () => {
 
   // Register
   const registerUser = (data) => {
-    const url = "https://hotels-api.academlo.tech/users";
+    const url = "http://localhost:8080/users";
     axios
       .post(url, data)
       .then((res) => {
@@ -20,7 +20,7 @@ const useAuth = () => {
 
   // login
   const loginUser = (data) => {
-    const url = "https://hotels-api.academlo.tech/users/login";
+    const url = "http://localhost:8080/users/login";
     axios
       .post(url, data)
       .then((res) => {

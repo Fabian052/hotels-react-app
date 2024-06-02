@@ -12,7 +12,7 @@ const ReserveCard = ({
   const reservationsDays = (ckeckOut - ckeckIn) / (1000 * 60 * 60 * 24);
 
   const handleDelete = () => {
-    const url = `https://hotels-api.academlo.tech/bookings/${reserve.id}`;
+    const url = `http://localhost:8080/bookings/${reserve.id}`;
     deleteBooking(url, reserve.id);
   };
 

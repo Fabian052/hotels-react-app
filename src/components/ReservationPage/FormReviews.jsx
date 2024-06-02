@@ -18,7 +18,7 @@ const FormReviews = ({ reserveSelected, reviewOpen, setReviewOpen }) => {
   const [, , createReview] = useCrud();
 
   const submit = (data) => {
-    const url = "https://hotels-api.academlo.tech/reviews";
+    const url = "http://localhost:8080/reviews";
     const newObj = {
       rating: +data.rating,
       comment: data.comment,

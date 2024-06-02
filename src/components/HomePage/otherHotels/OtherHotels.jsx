@@ -4,7 +4,7 @@ import HotelCard from "../HotelCard";
 import "./styles/OtherHotels.css";
 
 const OtherHotels = ({ hotel }) => {
-  const url = `https://hotels-api.academlo.tech/hotels?cityId=${hotel?.cityId}`;
+  const url = `http://localhost:8080/hotels?cityId=${hotel?.cityId}`;
   const [hotelsInCity, getHotelsInCity] = useFetch(url);
 
   useEffect(() => {
