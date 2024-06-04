@@ -4,6 +4,7 @@ import useCrud from "../../hooks/useCrud";
 import "./style/FormReview.css";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userSchemaReview } from "../ValidationsTheForm/userSchema";
+import { Toaster, toast } from "sonner";
 
 const FormReviews = ({ reserveSelected, reviewOpen, setReviewOpen }) => {
   const {
@@ -29,6 +30,16 @@ const FormReviews = ({ reserveSelected, reviewOpen, setReviewOpen }) => {
       rating: "",
       comment: "",
     });
+
+    const toastId = toast.loading("Loading...");
+    setTimeout(() => {
+      toast.success("Comment created successfully", {
+        id: toastId,
+      });
+    }, 500);
+    setTimeout(() => {
+      setReviewOpen(true);
+    }, 1000);
   };
 
   const reviewClose = () => {
@@ -102,6 +113,7 @@ const FormReviews = ({ reserveSelected, reviewOpen, setReviewOpen }) => {
           <button className="review__form-btn">Submit</button>
         </form>
       </article>
+      <Toaster richColors theme="system" />
     </div>
   );
 };

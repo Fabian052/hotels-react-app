@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
 
 const useAuth = () => {
   const navigate = useNavigate();
@@ -33,6 +34,7 @@ const useAuth = () => {
         console.log(err.response?.data.message);
         localStorage.removeItem("token");
         localStorage.removeItem("user");
+        toast.error("Credenciales inválidas");
       });
   };
 

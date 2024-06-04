@@ -4,6 +4,7 @@ import "./styles/FormReserve.css";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { userSchemaDate } from "../ValidationsTheForm/userSchema";
 import { useState } from "react";
+import { Toaster, toast } from "sonner";
 
 const FormReserve = ({ hotel }) => {
   const {
@@ -29,6 +30,10 @@ const FormReserve = ({ hotel }) => {
       checkIn: "",
       checkOut: "",
     });
+    const toasteId = toast.loading("Loading...");
+    setTimeout(() => {
+      toast.success("Reserva exitosamente realizada", { id: toasteId });
+    }, 1000);
   };
 
   return (
@@ -74,6 +79,7 @@ const FormReserve = ({ hotel }) => {
           <button className="reserve__btn">Submit</button>
         </div>
       </form>
+      <Toaster richColors theme="system" />
     </section>
   );
 };

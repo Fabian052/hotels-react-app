@@ -28,7 +28,7 @@ const HotelsIdPage = () => {
   const [review, getReview] = useCrud();
 
   useEffect(() => {
-    const url = `http://localhost:8080/reviews?hotelId=${hotel?.id}&userId=${user?.id}`;
+    const url = `http://localhost:8080/reviews?hotelId=${id}&userId=${user?.id}`;
     getReview(url);
   }, [id]);
 
@@ -84,7 +84,7 @@ const HotelsIdPage = () => {
       <h3 className="title__comment">Comments</h3>
       <div className="detail__review">
         {review || review?.total !== 0 ? (
-          review?.results.map((review, index) => (
+          review?.map((review, index) => (
             <ReviewsCards key={index} review={review} />
           ))
         ) : (

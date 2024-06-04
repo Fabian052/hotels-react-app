@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import useAuth from "../hooks/useAuth";
 import UserLogged from "../components/LoginPage/UserLogged";
 import { Link, useNavigate } from "react-router-dom";
+import { Toaster } from "sonner";
 
 const LoginPages = () => {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
@@ -81,6 +82,7 @@ const LoginPages = () => {
           </div>
         </div>
       </div>
+      <Toaster richColors theme="system" />
     </div>
   );
 };

@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import HotelCard from "../components/HomePage/HotelCard";
 import "./styles/HomePage.css";
 import UserLoginAndLogaut from "../components/LoginPage/UserLoginAndLogaut";
 import NavarLogin from "../components/LoginPage/NavarLogin";
 import FilteresBar from "../components/filtros/FilteresBar";
+import { Toaster, toast } from "sonner";
 
 const HomePage = () => {
   const [filterName, setFilterName] = useState("");
@@ -12,6 +13,12 @@ const HomePage = () => {
     from: 0,
     to: Infinity,
   });
+
+  // const [user, setUser] = useState(JSON.parse(localStorage.getItem("user")));
+  // const [token, setToken] = useState(JSON.parse(localStorage.getItem("token")));
+  // useEffect(() => {
+  //   if (user) toast.success(`Bienvenido ${user.firstName} ${user.lastName}`);
+  // }, []);
 
   const hotels = useSelector((state) => state.hotels);
 
@@ -45,6 +52,7 @@ const HomePage = () => {
           </div>
         ))}
       </div>
+      {/* <Toaster richColors theme="system" /> */}
     </div>
   );
 };
