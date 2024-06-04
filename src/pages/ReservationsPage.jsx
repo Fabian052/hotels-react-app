@@ -23,7 +23,7 @@ const ReservationsPage = () => {
   const [bookings, getBookings, , deleteBooking] = useCrud();
 
   useEffect(() => {
-    const url = `http://localhost:8080/bookings`;
+    const url = `https://booking-app-x8u4.onrender.com/bookings`;
     getBookings(url);
   }, []);
 

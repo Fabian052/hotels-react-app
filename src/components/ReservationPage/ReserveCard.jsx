@@ -12,7 +12,7 @@ const ReserveCard = ({
   const reservationsDays = (ckeckOut - ckeckIn) / (1000 * 60 * 60 * 24);
 
   const handleDelete = () => {
-    const url = `http://localhost:8080/bookings/${reserve.id}`;
+    const url = `https://booking-app-x8u4.onrender.com/bookings/${reserve.id}`;
     deleteBooking(url, reserve.id);
   };
 

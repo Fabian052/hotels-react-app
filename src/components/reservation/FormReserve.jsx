@@ -19,7 +19,7 @@ const FormReserve = ({ hotel }) => {
   const [, , createReserver] = useCrud();
 
   const submit = (data) => {
-    const url = `http://localhost:8080/bookings`;
+    const url = `https://booking-app-x8u4.onrender.com/bookings`;
     const sendObj = {
       checkIn: data.checkIn,
       checkOut: data.checkOut,

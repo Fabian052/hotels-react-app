@@ -19,7 +19,7 @@ const FormReviews = ({ reserveSelected, reviewOpen, setReviewOpen }) => {
   const [, , createReview] = useCrud();
 
   const submit = (data) => {
-    const url = "http://localhost:8080/reviews";
+    const url = "https://booking-app-x8u4.onrender.com/reviews";
     const newObj = {
       rating: +data.rating,
       comment: data.comment,

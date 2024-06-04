@@ -7,7 +7,7 @@ const useAuth = () => {
 
   // Register
   const registerUser = (data) => {
-    const url = "http://localhost:8080/users";
+    const url = "https://booking-app-x8u4.onrender.com/users";
     axios
       .post(url, data)
       .then((res) => {
@@ -21,7 +21,7 @@ const useAuth = () => {
 
   // login
   const loginUser = (data) => {
-    const url = "http://localhost:8080/users/login";
+    const url = "https://booking-app-x8u4.onrender.com/users/login";
     axios
       .post(url, data)
       .then((res) => {
